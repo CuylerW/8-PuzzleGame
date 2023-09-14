@@ -21,8 +21,8 @@ import java.util.Scanner;
 import java.net.*;
 import java.io.*;
 import java.applet.*;
-import com.phidgets.*;
-import com.phidgets.event.*;
+//import com.phidgets.*;
+//import com.phidgets.event.*;
 
 public class EightPuzzle extends JFrame
 { 
@@ -113,10 +113,12 @@ public class EightPuzzle extends JFrame
    private AudioClip soundYAH;
    
    // Initializing Phidget Components
+   /*
    private InterfaceKitPhidget ik1;
    private InterfaceKitPhidget ik2;
    private TextLCDPhidget LCD;
-   
+   */
+  
    // Needed with StartListener and PuzzleButtonListener
    private boolean start=false;
    private int h,w;
@@ -456,7 +458,7 @@ public class EightPuzzle extends JFrame
       }
    }
    
-   
+   /*
    public void openPhidgets()
    {
       try 
@@ -527,6 +529,8 @@ public class EightPuzzle extends JFrame
       }
    }
    
+   */
+
    // Listener for Starting Puzzle
    private class StartListener implements ActionListener
    {
