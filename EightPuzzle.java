@@ -2,15 +2,12 @@
 Programmer: Cuyler Warnock
 Date: 4/27/2016
 Course: CSCI 1302 11AM
-Purpose: Homework
-ACADEMIC HONESTY STATEMENT:
-I am sole author of the assignment. I have not received a digital copy or printout of the solution from anyone; however I receive
-outside help from the following websites and people: No one
-I have not given a digital copy or printout of my code to anyone; however, I discussed this problem with the following people: No one
-*/
+/* */
 
 import java.awt.*;
 import java.awt.event.*;
+
+
 import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.border.EmptyBorder;
@@ -63,21 +60,21 @@ public class EightPuzzle extends JFrame
    
    // Creating Images for Background
    public ImageIcon image;
-   ImageIcon image1 = new ImageIcon("LOTR.jpg");
+   ImageIcon image1 = new ImageIcon("images/LOTR.jpg");
    ImageIcon imgLOTR = new ImageIcon(getScaledImage(image1.getImage(),300,200));
-   ImageIcon image2 = new ImageIcon("starwars.jpg");
+   ImageIcon image2 = new ImageIcon("images/starwars.jpg");
    ImageIcon imgStarWars = new ImageIcon(getScaledImage(image2.getImage(),300,200));
-   ImageIcon image3 = new ImageIcon("harrypotter.jpg");
+   ImageIcon image3 = new ImageIcon("images/harrypotter.jpg");
    ImageIcon imgHarryPotter = new ImageIcon(getScaledImage(image3.getImage(),300,200));
-   ImageIcon image4 = new ImageIcon("Hubble.jpg");
+   ImageIcon image4 = new ImageIcon("images/Hubble.jpg");
    ImageIcon imgHubble = new ImageIcon(getScaledImage(image4.getImage(),300,200));
-   ImageIcon image5 = new ImageIcon("universe.jpg");
+   ImageIcon image5 = new ImageIcon("images/universe.jpg");
    ImageIcon imgUniverse = new ImageIcon(getScaledImage(image5.getImage(),300,200));
-   ImageIcon image6 = new ImageIcon("galaxy.jpg");
+   ImageIcon image6 = new ImageIcon("images/galaxy.jpg");
    ImageIcon imgGalaxy = new ImageIcon(getScaledImage(image6.getImage(),300,200));
-   ImageIcon image7 = new ImageIcon("troll.jpg");
+   ImageIcon image7 = new ImageIcon("images/troll.jpg");
    ImageIcon imgTroll = new ImageIcon(getScaledImage(image7.getImage(),200,200));
-   ImageIcon image8 = new ImageIcon("wood.jpg");
+   ImageIcon image8 = new ImageIcon("images/wood.jpg");
    ImageIcon wood = new ImageIcon(getScaledImage(image8.getImage(),300,300));
 
    // Everything Needed for Right Panel
@@ -305,42 +302,42 @@ public class EightPuzzle extends JFrame
       // Creating Audio Clips
       try
       {
-         File file = new File("ConcerningHobbits.wav");	
+         File file = new File("sounds/ConcerningHobbits.wav");	
          URI uri = file.toURI();			
          URL url = uri.toURL();			 
          soundLOTR = Applet.newAudioClip(url); 	
          
-         file = new File("PhantomMenace.wav");
+         file = new File("sounds/PhantomMenace.wav");
          uri = file.toURI();
          url=uri.toURL();
          soundSW = Applet.newAudioClip(url);
          
-         file = new File("HarryPotter.wav");
+         file = new File("sounds/HarryPotter.wav");
          uri = file.toURI();
          url=uri.toURL();
          soundHP = Applet.newAudioClip(url);
          
-         file = new File("MassEffect.wav");
+         file = new File("sounds/MassEffect.wav");
          uri = file.toURI();
          url=uri.toURL();
          soundMassEffect = Applet.newAudioClip(url);
          
-         file = new File("Interstellar.wav");
+         file = new File("sounds/Interstellar.wav");
          uri = file.toURI();
          url=uri.toURL();
          soundInterstellar = Applet.newAudioClip(url);
          
-         file = new File("Halo.wav");
+         file = new File("sounds/Halo.wav");
          uri = file.toURI();
          url=uri.toURL();
          soundHalo = Applet.newAudioClip(url);
          
-         file = new File("Troll.wav");
+         file = new File("sounds/Troll.wav");
          uri = file.toURI();
          url=uri.toURL();
          soundTroll = Applet.newAudioClip(url);
          
-         file = new File("YAH.wav");
+         file = new File("sounds/YAH.wav");
          uri = file.toURI();
          url=uri.toURL();
          soundYAH = Applet.newAudioClip(url);
@@ -665,7 +662,7 @@ public class EightPuzzle extends JFrame
          for (int i=1; i<=8; i++)
          {
             start = true;
-            String picFile = String.format("%s%d.jpg",s,i);
+            String picFile = String.format("images/%s%d.jpg",s,i);
             btnArray.get(i-1).setIcon(new ImageIcon(getScaledImage(new ImageIcon(picFile).getImage(),w,h)));
          }
          soundTroll.stop();
